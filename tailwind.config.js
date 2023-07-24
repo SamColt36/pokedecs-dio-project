@@ -19,9 +19,10 @@ module.exports = {
         // => @media and (min-width: 300px) and (max-width: 425px)
       },
       colors: {
-        verde: '#14A06F'
-      }
+        verde: '#48D0B0'
+      },
     },
   },
+
   plugins: [],
 }
