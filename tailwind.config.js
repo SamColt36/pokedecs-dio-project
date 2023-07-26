@@ -11,12 +11,14 @@ module.exports = {
         // Tablets
         // => @media and (min-width: 768px) and (max-width: 1023px)
 
-        // md: { min: "426px", max: "767px" },
+        md: { min: "426px", max: "767px" },
         // => @media and (min-width: 426px) and (max-width: 767px)
 
-        sm: { min: "300px", max: "767px" },
-        // Smartphones
+        sm: { min: "300px", max: "425px" },
         // => @media and (min-width: 300px) and (max-width: 425px)
+
+        xs: { max: "300px" },
+        // => @media and (max-width: 300px)
       },
       colors: {
         verde: '#48D0B0'
