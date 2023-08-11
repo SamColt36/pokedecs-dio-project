@@ -817,10 +817,4 @@ video {
   .xs\:grid-cols-1 {
     grid-template-columns: repeat(1, minmax(0, 1fr));
   }
-
-  @media (min-width: 426px) and (max-width: 767px) {
-    .xs\:md\:grid-cols-3 {
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-    }
-  }
 }
