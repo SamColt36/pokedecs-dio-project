@@ -13,18 +13,17 @@
 	<link rel="canonical" href="">
 	<link rel="stylesheet" href="./src/css/output.css">
 	<title>Pokedex</title>
-	<link rel="icon" type="image/x-icon" href="./src/assets/background-pokeball.ico" sizes="96x96">
-	<link rel="icon" type="image/png" href="./src/assets/background-pokeball.png" sizes="96x96">
+	<link rel="icon" type="image/x-icon" href="./favicon.ico" sizes="96x96">
 </head>
 
 <body class="bg-gray-50 xl:max-w-4xl xl:mx-auto">
-	<main class="p-2 space-y-4 lg:p-8 xl:bg-white xl:rounded-xl">
+	<main class="p-2 xl:px-0 sm:px-0 md:px-0 space-y-4 lg:p-8 xl:bg-white xl:rounded-xl">
 		<h1 class="font-bold text-2xl lg:text-3xl">Pokedex</h1>
 
-		<ol class="grid grid-cols-2 xs:grid-cols-1 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-4">
+		<ol id="pokemonList" class="grid grid-cols-2 justify-center xs:grid-cols-1 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-4">
 			<!--Card com Pokemon-->
 			<li
-				class="relative flex flex-col m-2 p-3 pb-1 bg-verde text-white rounded-lg overflow-hidden drop-shadow-sm sm:min-w-[50vw]">
+				class="relative flex flex-col m-2 p-3 pb-1 bg-verde text-white rounded-lg overflow-hidden drop-shadow-sm sm:min-w-[40vw]">
 				<!--Imagens de background-->
 				<figure>
 					<img src="./src/assets/background-pokeball-rectangle.png" alt="Ilustração de retângulo opaco"
@@ -57,7 +56,8 @@
 		</ol>
 
 	</main>
+	<script src="./src/js/poke-api.js"></script>
 	<script defer src="./src/js/main.js"></script>
+	
 </body>
-
 </html>
