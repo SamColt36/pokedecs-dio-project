@@ -14,7 +14,7 @@ function convertPokemonToLi(pokemon) {
 		</figure>
 		<!--/Imagens de background-->
 		<!--ID do Pokemon-->
-		<span class="text-right text-black font-medium opacity-10 z-20 lg:text-lg">#001</span>
+		<span class="text-right text-black font-medium opacity-10 z-20 lg:text-lg">#00${pokemon.number}</span>
 		<!--/ID do Pokemon-->
 		<section class="grid grid-cols-2">
 			<!--Nome do Pokemon-->
@@ -22,13 +22,12 @@ function convertPokemonToLi(pokemon) {
 			<!--/Nome do Pokemon-->
 			<!--Types-->
 			<ol class="flex flex-col space-y-2 col-span-1">
-				<li class="bg-white/25 py-1 px-3 rounded-lg text-center text-xs w-min lg:text-sm">Grass</li>
-				<li class="bg-white/25 py-1 px-3 rounded-lg text-center text-xs w-min lg:text-sm">Poison</li>
+				${pokemon.types.map((type) => `<li class="bg-white/25 py-1 px-3 rounded-lg text-center text-xs w-min lg:text-sm">${type}</li>`).join('')}
 			</ol>
 			<!--/Types-->
 			<!--Imagem do Pokemon-->
 			<img class="max-w-full h-20 self-end z-20 col-span-1 lg:h-24"
-				src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/1.svg"
+				src="${pokemon.photo}"
 				alt="${pokemon.name}">
 			<!--/Imagem do Pokemon-->
 		</section>
