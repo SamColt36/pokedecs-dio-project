@@ -1,10 +1,17 @@
-const offset = 0
-const limit = 10
-const url = `https://pokeapi.co/api/v2/pokemon?offset=${offset}&limit=${limit}`
+const pokemonList = document.getElementById('pokemonList')
+const loadMoreButton = document.getElementById('loadMoreButton')
+const containerLoadMoreButton = document.getElementById('containerLoadMoreButton')
+const maxRecords = 151
+const limit = 6
+let offset = 0
+
+function capitalizeFirstLetter(string) {
+	return string.charAt(0).toUpperCase() + string.slice(1);
+}
 
 function convertPokemonToLi(pokemon) {
 	return `
- 	<li class="relative flex flex-col m-2 p-3 pb-1 bg-verde text-white rounded-lg overflow-hidden drop-shadow-sm sm:min-w-[40vw]">
+ 	<li class="${pokemon.type} relative flex flex-col m-2 p-3 pb-1 text-white rounded-lg overflow-hidden drop-shadow-sm sm:min-w-[40vw]">
 		<!--Imagens de background-->
 		<figure>
 			<img src="./src/assets/background-pokeball-rectangle.png" alt="Ilustração de retângulo opaco"
@@ -18,11 +25,11 @@ function convertPokemonToLi(pokemon) {
 		<!--/ID do Pokemon-->
 		<section class="grid grid-cols-2">
 			<!--Nome do Pokemon-->
-			<h5 class="font-medium tracking-wide col-span-2 my-2 lg:text-lg">${pokemon.name}</h5>
+			<h5 class="font-medium tracking-wide col-span-2 my-2 lg:text-lg">${capitalizeFirstLetter(pokemon.name)}</h5>
 			<!--/Nome do Pokemon-->
 			<!--Types-->
 			<ol class="flex flex-col space-y-2 col-span-1">
-				${pokemon.types.map((type) => `<li class="bg-white/25 py-1 px-3 rounded-lg text-center text-xs w-min lg:text-sm">${type}</li>`).join('')}
+				${pokemon.types.map((type) => `<li class="type ${type} bg-white/25 py-1 px-3 rounded-lg text-center text-xs w-min lg:text-sm">${type}</li>`).join('')}
 			</ol>
 			<!--/Types-->
 			<!--Imagem do Pokemon-->
@@ -33,11 +40,28 @@ function convertPokemonToLi(pokemon) {
 		</section>
 	</li>
 	<!--/Card com Pokemon-->
- `
+ 	`
 }
 
-const pokemonList = document.getElementById('pokemonList')
-pokeApi.getPokemons().then((pokemons = []) => {
-	pokemonList.innerHTML = (pokemons.map(convertPokemonToLi)).join('')
-})
+function loadPokemonItens(offset, limit) {
+	pokeApi.getPokemons(offset, limit).then((pokemons = []) => {
+		const newHtml = pokemons.map(convertPokemonToLi).join('')
+		pokemonList.innerHTML += newHtml
+	})
 
+}
+
+loadPokemonItens(offset, limit)
+
+loadMoreButton.addEventListener('click', () => {
+	offset += limit
+	const qntRecordsNextPage = offset - limit
+
+	if (qntRecordsNextPage >= maxRecords) {
+		const newLimit = maxRecords - offset
+		loadPokemonItens(offset, newLimit)
+
+		containerLoadMoreButton.classList.add('ocultar-button')
+	}
+	else loadPokemonItens(offset, limit)
+})

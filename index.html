@@ -17,48 +17,31 @@
 </head>
 
 <body class="bg-gray-50 xl:max-w-4xl xl:mx-auto">
-	<main class="p-2 xl:px-0 sm:px-0 md:px-0 space-y-4 lg:p-8 xl:bg-white xl:rounded-xl">
+	<main class="relative p-2 my-9 xl:px-0 sm:px-2 md:px-2 space-y-4 lg:p-8 xl:bg-white xl:rounded-xl">
 		<h1 class="font-bold text-2xl lg:text-3xl">Pokedex</h1>
 
-		<ol id="pokemonList" class="grid grid-cols-2 justify-center xs:grid-cols-1 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-4">
-			<!--Card com Pokemon-->
-			<li
-				class="relative flex flex-col m-2 p-3 pb-1 bg-verde text-white rounded-lg overflow-hidden drop-shadow-sm sm:min-w-[40vw]">
-				<!--Imagens de background-->
-				<figure>
-					<img src="./src/assets/background-pokeball-rectangle.png" alt="Ilustração de retângulo opaco"
-						class="absolute top-0 left-0 -rotate-[10deg] -translate-x-2/3 -translate-y-2/3 h-24 z-10 opacity-25">
-					<img src="./src/assets/background-pokeball.png" alt="Ilustração de pokeball opaca"
-						class="absolute -bottom-4 -right-4 h-32 z-10 opacity-25">
-				</figure>
-				<!--/Imagens de background-->
-				<!--ID do Pokemon-->
-				<span class="text-right text-black font-medium opacity-10 z-20 lg:text-lg">#001</span>
-				<!--/ID do Pokemon-->
-				<section class="grid grid-cols-2">
-					<!--Nome do Pokemon-->
-					<h5 class="font-medium tracking-wide col-span-2 my-2 lg:text-lg">Bulbasaur</h5>
-					<!--/Nome do Pokemon-->
-					<!--Types-->
-					<ol class="flex flex-col space-y-2 col-span-1">
-						<li class="bg-white/25 py-1 px-3 rounded-lg text-center text-xs w-min lg:text-sm">Grass</li>
-						<li class="bg-white/25 py-1 px-3 rounded-lg text-center text-xs w-min lg:text-sm">Poison</li>
-					</ol>
-					<!--/Types-->
-					<!--Imagem do Pokemon-->
-					<img class="max-w-full h-20 self-end z-20 col-span-1 lg:h-24"
-						src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/1.svg"
-						alt="Bulbasaur">
-					<!--/Imagem do Pokemon-->
-				</section>
-			</li>
-			<!--/Card com Pokemon-->
+		<ol id="pokemonList"
+			class="grid grid-cols-2 justify-center xs:grid-cols-1 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-4">
+			<!--Li Card com Pokemon-->
+			<!--/Li Card com Pokemon-->
 		</ol>
-
+		<!--Botão de paginação-->
+		<div class="roxo h-12 w-12 flex items-center justify-center rounded-full absolute bottom-0 right-0 shadow-lg hover:shadow-sm translate-x-2.5 translate-y-2.5 sm:-translate-x-1.5 md:-translate-x-1.5" id="containerLoadMoreButton">
+			<button type="button" id="loadMoreButton">
+				<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1"
+					stroke="currentColor" class="w-8 h-8 text-white">
+					<path stroke-linecap="round" stroke-linejoin="round"
+						d="M10.5 6h9.75M10.5 6a1.5 1.5 0 11-3 0m3 0a1.5 1.5 0 10-3 0M3.75 6H7.5m3 12h9.75m-9.75 0a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m-3.75 0H7.5m9-6h3.75m-3.75 0a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m-9.75 0h9.75" />
+				</svg>
+			</button>
+		</div>
+		<!--/Botão de paginação-->
 	</main>
+
 	<script src="./src/js/pokemon-model.js"></script>
 	<script src="./src/js/poke-api.js"></script>
 	<script defer src="./src/js/main.js"></script>
-	
+
 </body>
+
 </html>
