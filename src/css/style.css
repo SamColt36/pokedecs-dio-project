@@ -1,11 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
 
 .normal {
 	background-color: #A8A878
 }
 
 .fire {
-	background-color: #F08030
+	background-color: #f06630
 }
 
 .water {
@@ -13,11 +14,11 @@
 }
 
 .grass {
-	background-color: #78C850
+	background-color: #64D368
 }
 
 .electric {
-	background-color: #F8D030
+	background-color: #FFD723
 }
 
 .ice {
@@ -76,6 +77,20 @@
 	background-color: #6C7ADC;
 }
 
+.roxo-color {
+	color: #6C7ADC;
+}
+
 .ocultar-button {
 	visibility: hidden;
+}
+
+.righteous {
+	font-family: 'Righteous', cursive;
+}
+
+.flex-center {
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }

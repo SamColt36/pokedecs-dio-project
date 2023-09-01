@@ -15,10 +15,87 @@
 	<title>Pokedex</title>
 	<link rel="icon" type="image/x-icon" href="./favicon.ico" sizes="96x96">
 </head>
+<!--BODY bg-gray-50-->
 
-<body class="bg-gray-50 xl:max-w-4xl xl:mx-auto">
+<body class="relative w-screen h-screen bg-red-300 xl:max-w-4xl xl:mx-auto">
+	<!--Box navegação-->
+	<header class="electric relative flex justify-between items-center h-16">
+		<!--Logo Tipografia-->
+		<img src="./src/assets/Pokemon-logo.png" alt="" class="h-16">
+		<!--/Logo Tipografia-->
+		<!--Icon menu sandwish-->
+		<button type="button"
+			class="xs:inline-block sm:inline-block md:inline-block lg:hidden xl:hidden p-2 mx-2 rounded-full"
+			id="btnSandwish">
+			<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+				stroke="currentColor" class="w-7 h-7">
+				<path stroke-linecap="round" stroke-linejoin="round" d="M3.75 9h16.5m-16.5 6.75h16.5"
+					id="btnSandwishSvgPath" />
+			</svg>
+
+		</button>
+		<!--/Icon menu sandwish-->
+	</header>
+	<!--/Box navegação-->
+
+	<!--Menu Suspenso-->
+	<!--Essa tag personalizada serve somente para fins de alinhamento-->
+	<menuSuspenso class="fixed bottom-0 translate-y-full" id="menuSuspenso">
+		<!--Menu-->
+		<div class="flex flex-col-reverse items-end h-full">
+			<ol class="flex flex-col space-y-2 py-2 px-3 rounded-t-xl bg-white w-screen">
+				<!--Linha com estilização-->
+				<span class="inline-block bg-gray-200 w-12 h-2 m-2 rounded-full mx-auto"></span>
+				<!--/Linha com estilização-->
+				<li>
+					<a href="" class="px-2 py-2 flex items-center" target="_blank">
+						<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1"
+							stroke="currentColor" class="w-6 h-6 mx-2">
+							<path stroke-linecap="round" stroke-linejoin="round"
+								d="M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
+						</svg>
+						Home
+					</a>
+				</li>
+				<hr>
+				<li>
+					<a href="https://pokeapi.co/" class="px-2 py-2 flex items-center" target="_blank">
+						<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1"
+							stroke="currentColor" class="w-6 h-6 mx-2">
+							<path stroke-linecap="round" stroke-linejoin="round"
+								d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25" />
+						</svg>
+						Documentation
+					</a>
+				</li>
+				<hr>
+				<li>
+					<a href="https://github.com/SamColt36" class="px-2 py-2 flex items-center" target="_blank">
+						<svg class="w-6 h-6 mx-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"
+							stroke-linecap="round" stroke-linejoin="round">
+							<path
+								d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" />
+						</svg>
+						About
+					</a>
+				</li>
+				<hr>
+				<li id="exit" class="px-2 py-2 flex items-center cursor-pointer">
+					<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+						stroke="currentColor" class="w-6 h-6 mx-2">
+						<path stroke-linecap="round" stroke-linejoin="round"
+							d="M15.75 9V5.25A2.25 2.25 0 0013.5 3h-6a2.25 2.25 0 00-2.25 2.25v13.5A2.25 2.25 0 007.5 21h6a2.25 2.25 0 002.25-2.25V15M12 9l-3 3m0 0l3 3m-3-3h12.75" />
+					</svg>
+					Exit
+				</li>
+			</ol>
+		</div>
+		<!--/Menu-->
+	</menuSuspenso>
+	<!--/Menu Suspenso-->
+	<!--/Essa tag personalizada serve somente para fins de alinhamento-->
 	<main class="relative p-2 my-9 xl:px-0 sm:px-2 md:px-2 space-y-4 lg:p-8 xl:bg-white xl:rounded-xl">
-		<h1 class="font-bold text-2xl lg:text-3xl">Pokedex</h1>
+		<h1 class="text-2xl righteous lg:text-3xl">Pokedex</h1>
 
 		<ol id="pokemonList"
 			class="grid grid-cols-2 justify-center xs:grid-cols-1 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-4">
@@ -26,7 +103,8 @@
 			<!--/Li Card com Pokemon-->
 		</ol>
 		<!--Botão de paginação-->
-		<div class="roxo h-12 w-12 flex items-center justify-center rounded-full absolute bottom-0 right-0 shadow-lg hover:shadow-sm translate-x-2.5 translate-y-2.5 sm:-translate-x-1.5 md:-translate-x-1.5" id="containerLoadMoreButton">
+		<div class="roxo h-12 w-12 flex items-center justify-center rounded-full absolute bottom-0 right-0 shadow-lg hover:shadow-sm translate-x-2.5 translate-y-2.5 sm:-translate-x-1.5 md:-translate-x-1.5"
+			id="containerLoadMoreButton">
 			<button type="button" id="loadMoreButton">
 				<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1"
 					stroke="currentColor" class="w-8 h-8 text-white">
@@ -38,10 +116,14 @@
 		<!--/Botão de paginação-->
 	</main>
 
+	<!--Seção de Scripts-->
+	<script src="./src/js/botão-sandwish.js"></script>
+	<!--
 	<script src="./src/js/pokemon-model.js"></script>
 	<script src="./src/js/poke-api.js"></script>
 	<script defer src="./src/js/main.js"></script>
-
+	<!--Seção de Scripts-->
+	<p class=""></p>
 </body>
 
 </html>
