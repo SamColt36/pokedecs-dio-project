@@ -2,7 +2,7 @@ const pokemonList = document.getElementById('pokemonList')
 const loadMoreButton = document.getElementById('loadMoreButton')
 const containerLoadMoreButton = document.getElementById('containerLoadMoreButton')
 const maxRecords = 151
-const limit = 1
+const limit = 6
 let offset = 0
 
 function capitalizeFirstLetter(string) {

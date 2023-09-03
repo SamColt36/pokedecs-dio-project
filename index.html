@@ -17,7 +17,7 @@
 </head>
 <!--BODY bg-gray-50-->
 
-<body class="relative w-screen h-screen bg-red-300 xl:max-w-4xl xl:mx-auto">
+<body class="relative w-screen h-screen bg-gray-50 xl:max-w-4xl xl:mx-auto">
 	<!--Box navegação-->
 	<header class="electric relative flex justify-between items-center h-16">
 		<!--Logo Tipografia-->
@@ -25,7 +25,7 @@
 		<!--/Logo Tipografia-->
 		<!--Icon menu sandwish-->
 		<button type="button"
-			class="xs:inline-block sm:inline-block md:inline-block lg:hidden xl:hidden p-2 mx-2 rounded-full"
+			class="xs:inline-block sm:inline-block md:inline-block lg:hidden xl:hidden p-2 mx-2 z-50"
 			id="btnSandwish">
 			<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
 				stroke="currentColor" class="w-7 h-7">
@@ -40,7 +40,7 @@
 
 	<!--Menu Suspenso-->
 	<!--Essa tag personalizada serve somente para fins de alinhamento-->
-	<menuSuspenso class="fixed bottom-0 translate-y-full" id="menuSuspenso">
+	<menuSuspenso class="fixed bottom-0 translate-y-full z-50 shadow-inner lg:hidden xl:hidden" id="menuSuspenso">
 		<!--Menu-->
 		<div class="flex flex-col-reverse items-end h-full">
 			<ol class="flex flex-col space-y-2 py-2 px-3 rounded-t-xl bg-white w-screen">
@@ -86,19 +86,22 @@
 						<path stroke-linecap="round" stroke-linejoin="round"
 							d="M15.75 9V5.25A2.25 2.25 0 0013.5 3h-6a2.25 2.25 0 00-2.25 2.25v13.5A2.25 2.25 0 007.5 21h6a2.25 2.25 0 002.25-2.25V15M12 9l-3 3m0 0l3 3m-3-3h12.75" />
 					</svg>
-					Exit
+					Close
 				</li>
 			</ol>
 		</div>
 		<!--/Menu-->
 	</menuSuspenso>
-	<!--/Menu Suspenso-->
 	<!--/Essa tag personalizada serve somente para fins de alinhamento-->
-	<main class="relative p-2 my-9 xl:px-0 sm:px-2 md:px-2 space-y-4 lg:p-8 xl:bg-white xl:rounded-xl">
+	<!--/Menu Suspenso-->
+
+	<!--Lista de Pokemons-->
+	<main class="relative p-2 my-9 z-10 xl:px-0 sm:px-2 md:px-2 space-y-4 lg:p-8 xl:bg-white xl:rounded-xl">
+		<span class="hidden top-0 left-0 h-full bg-black/80 w-full z-40" id="span-black"></span>
 		<h1 class="text-2xl righteous lg:text-3xl">Pokedex</h1>
 
 		<ol id="pokemonList"
-			class="grid grid-cols-2 justify-center xs:grid-cols-1 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-4">
+			class="grid grid-cols-2 justify-center z-30 xs:grid-cols-1 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-4">
 			<!--Li Card com Pokemon-->
 			<!--/Li Card com Pokemon-->
 		</ol>
@@ -115,10 +118,11 @@
 		</div>
 		<!--/Botão de paginação-->
 	</main>
+	<!--Lista de Pokemons-->
 
 	<!--Seção de Scripts-->
 	<script src="./src/js/botão-sandwish.js"></script>
-	<!--
+	<!---->
 	<script src="./src/js/pokemon-model.js"></script>
 	<script src="./src/js/poke-api.js"></script>
 	<script defer src="./src/js/main.js"></script>
