@@ -17,28 +17,47 @@
 </head>
 <!--BODY bg-gray-50-->
 
-<body class="relative w-screen h-screen bg-gray-50 xl:max-w-4xl xl:mx-auto">
+<body class="relative w-screen h-screen">
 	<!--Box navegação-->
-	<header class="electric relative flex justify-between items-center h-16">
-		<!--Logo Tipografia-->
-		<img src="./src/assets/Pokemon-logo.png" alt="" class="h-16">
-		<!--/Logo Tipografia-->
-		<!--Icon menu sandwish-->
-		<button type="button"
-			class="xs:inline-block sm:inline-block md:inline-block lg:hidden xl:hidden p-2 mx-2 z-50"
-			id="btnSandwish">
-			<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-				stroke="currentColor" class="w-7 h-7">
-				<path stroke-linecap="round" stroke-linejoin="round" d="M3.75 9h16.5m-16.5 6.75h16.5"
-					id="btnSandwishSvgPath" />
-			</svg>
+	<header class="electric shadow-lg py-1 tracking-wide shadow-black/10 sm:px-2 md:px-2 lg:px-8 xl:px-10">
+		<!--Div criada para fins de alinhamento-->
+		<div class="relative flex justify-between items-center xl:max-w-4xl xl:mx-auto">
+			<!--Logo Tipografia-->
+			<img src="./src/assets/Pokemon-logo.png" alt="" class="h-7 lg:h-6 xl:h-8">
+			<!--/Logo Tipografia-->
 
-		</button>
-		<!--/Icon menu sandwish-->
+			<!--Menu em forma de lista. Disponível para desktop-->
+			<ol class="hidden lg:flex xl:flex px-3">
+				<li><a href="" class="px-2 py-2 flex items-center" target="_blank">Home</a></li>
+
+				<li><a href="https://pokeapi.co/" class="px-2 py-2 flex items-center" target="_blank">Documentation</a>
+				</li>
+
+				<li><a href="https://github.com/SamColt36" class="px-2 py-2 flex items-center" target="_blank">About</a>
+				</li>
+
+				<li id="exit" class="px-2 py-2 flex items-center cursor-pointer">Close</li>
+			</ol>
+			<!--/Menu em forma de lista. Disponível para desktop-->
+
+			<!--Icon menu sandwish-->
+			<button type="button"
+				class="xs:inline-block sm:inline-block md:inline-block lg:hidden xl:hidden p-2 mx-2 z-50"
+				id="btnSandwish">
+				<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+					stroke="currentColor" class="w-7 h-7">
+					<path stroke-linecap="round" stroke-linejoin="round" d="M3.75 9h16.5m-16.5 6.75h16.5"
+						id="btnSandwishSvgPath" />
+				</svg>
+
+			</button>
+			<!--/Icon menu sandwish-->
+		</div>
+		<!--/Div criada para fins de alinhamento-->
 	</header>
 	<!--/Box navegação-->
 
-	<!--Menu Suspenso-->
+	<!--Menu Suspenso para Mobile-->
 	<!--Essa tag personalizada serve somente para fins de alinhamento-->
 	<menuSuspenso class="fixed bottom-0 translate-y-full z-50 shadow-inner lg:hidden xl:hidden" id="menuSuspenso">
 		<!--Menu-->
@@ -57,7 +76,7 @@
 						Home
 					</a>
 				</li>
-				<hr>
+				<hr><!--Linha divisória-->
 				<li>
 					<a href="https://pokeapi.co/" class="px-2 py-2 flex items-center" target="_blank">
 						<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1"
@@ -68,7 +87,7 @@
 						Documentation
 					</a>
 				</li>
-				<hr>
+				<hr><!--Linha divisória-->
 				<li>
 					<a href="https://github.com/SamColt36" class="px-2 py-2 flex items-center" target="_blank">
 						<svg class="w-6 h-6 mx-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"
@@ -79,9 +98,9 @@
 						About
 					</a>
 				</li>
-				<hr>
-				<li id="exit" class="px-2 py-2 flex items-center cursor-pointer">
-					<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+				<hr><!--Linha divisória-->
+				<li class="px-2 py-2 flex items-center cursor-pointer" id="closeMenu">
+					<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1"
 						stroke="currentColor" class="w-6 h-6 mx-2">
 						<path stroke-linecap="round" stroke-linejoin="round"
 							d="M15.75 9V5.25A2.25 2.25 0 0013.5 3h-6a2.25 2.25 0 00-2.25 2.25v13.5A2.25 2.25 0 007.5 21h6a2.25 2.25 0 002.25-2.25V15M12 9l-3 3m0 0l3 3m-3-3h12.75" />
@@ -93,26 +112,60 @@
 		<!--/Menu-->
 	</menuSuspenso>
 	<!--/Essa tag personalizada serve somente para fins de alinhamento-->
-	<!--/Menu Suspenso-->
+	<!--/Menu Suspenso para Mobile-->
+
+	<!--Banner-->
+	<section class="h-screen px-0 py-10 xl:px-10">
+		<div class="max-w-6xl mx-auto">
+			<div
+				class="flex items-center justify-center">
+				<div
+					class="space-y-4 xs:mx-0 sm:space-y-6 sm:mx-0 md:mx-0 md:space-y-6 md:mr-auto lg:space-y-9 lg:w-full">
+					<h1 class="text-4xl lg:text-6xl lg:max-w-lg xl:max-w-lg xl:text-6xl">Pokedex: Explore the World of
+						Pokémon!</h1>
+
+					<!--Texto usado somente e smartphones-->
+					<p class="max-w-xs xs:text-xs sm:text-xl md:text-xl lg:hidden xl:hidden">Welcome to the Pokedex, your trusted
+						companion in becoming a Pokémon Master. Start your adventure now!</p>
+					<!--/Texto usado somente e smartphones-->
+
+					<!--Texto mias descritivo usando em telas maiores que de smartphones-->
+					<p class="max-w-xs xs:hidden sm:hidden md:hidden lg:text-2xl lg:max-w-md">Welcome to
+						the Pokedex,
+						your
+						trusted companion on the journey to become a Pokémon Master. Explore, discover, and capture
+						all known Pokémon here. Your adventure begins now!
+					</p>
+					<!--/Texto mias descritivo usando em telas maiores que de smartphones-->
+					<a href="#main"
+						class="inline-block bg-blue-300 py-3 px-5 sm:py-6 sm:px-10 sm:text-xl m:py-6 md:px-10 md:text-xl lg:py-7 lg:px-16 lg:text-2xl font-bold text-white" id="letsStart">Let's
+						start</a>
+				</div>
+			</div>
+			<img src="./src/assets/Pokemon.png" alt="" class="">
+		</div>
+	</section>
+	<!--/Banner-->
 
 	<!--Lista de Pokemons-->
-	<main class="relative p-2 my-9 z-10 xl:px-0 sm:px-2 md:px-2 space-y-4 lg:p-8 xl:bg-white xl:rounded-xl">
-		<span class="hidden top-0 left-0 h-full bg-black/80 w-full z-40" id="span-black"></span>
-		<h1 class="text-2xl righteous lg:text-3xl">Pokedex</h1>
-
+	<main
+		class="relative px-2 pb-4 z-10 space-y-4 lg:p-8 xl:bg-white xl:rounded-xl xl:max-w-4xl xl:mx-auto xl:px-0" id="main">
+		<!--Esse span é o responsável por deixar a tela escura quando o menu suspenso está ativado-->
+		<span class="hidden top-0 left-0 w-screen h-screen bg-black/75 z-30" id="spanBlack"></span>
+		<!--/Esse span é o responsável por deixar a tela escura quando o menu suspenso está ativado-->
+		<h1>Pokedex</h1>
 		<ol id="pokemonList"
 			class="grid grid-cols-2 justify-center z-30 xs:grid-cols-1 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-4">
 			<!--Li Card com Pokemon-->
 			<!--/Li Card com Pokemon-->
 		</ol>
 		<!--Botão de paginação-->
-		<div class="roxo h-12 w-12 flex items-center justify-center rounded-full absolute bottom-0 right-0 shadow-lg hover:shadow-sm translate-x-2.5 translate-y-2.5 sm:-translate-x-1.5 md:-translate-x-1.5"
+		<div class="roxo h-12 w-12 mx-auto flex items-center justify-center rounded-full shadow-lg hover:shadow-sm lg:h-14 lg:w-14"
 			id="containerLoadMoreButton">
 			<button type="button" id="loadMoreButton">
-				<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1"
+				<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
 					stroke="currentColor" class="w-8 h-8 text-white">
-					<path stroke-linecap="round" stroke-linejoin="round"
-						d="M10.5 6h9.75M10.5 6a1.5 1.5 0 11-3 0m3 0a1.5 1.5 0 10-3 0M3.75 6H7.5m3 12h9.75m-9.75 0a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m-3.75 0H7.5m9-6h3.75m-3.75 0a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m-9.75 0h9.75" />
+					<path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
 				</svg>
 			</button>
 		</div>
@@ -121,13 +174,12 @@
 	<!--Lista de Pokemons-->
 
 	<!--Seção de Scripts-->
-	<script src="./src/js/botão-sandwish.js"></script>
+	<script defer src="./src/js/botão-sandwish.js"></script>
 	<!---->
 	<script src="./src/js/pokemon-model.js"></script>
 	<script src="./src/js/poke-api.js"></script>
 	<script defer src="./src/js/main.js"></script>
 	<!--Seção de Scripts-->
-	<p class=""></p>
 </body>
 
 </html>

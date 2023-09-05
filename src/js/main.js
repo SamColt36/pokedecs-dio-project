@@ -11,7 +11,7 @@ function capitalizeFirstLetter(string) {
 
 function convertPokemonToLi(pokemon) {
 	return `
- 	<li class="${pokemon.type} relative flex flex-col m-2 p-3 pb-1 text-white rounded-lg overflow-hidden drop-shadow-sm sm:min-w-[40vw]">
+ 	<li class="${pokemon.type} relative flex flex-col m-2 p-3 pb-1 text-white rounded-lg overflow-hidden shadow-lg shadow-black/20 sm:min-w-[40vw]">
 		<!--Imagens de background-->
 		<figure>
 			<img src="./src/assets/background-pokeball-rectangle.png" alt="Ilustração de retângulo opaco"

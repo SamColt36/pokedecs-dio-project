@@ -1,8 +1,9 @@
 const menuSuspenso = document.getElementById('menuSuspenso')
-const exit = document.getElementById('exit')
+const closeMenu = document.getElementById('closeMenu')
 const btnSandwish = document.getElementById('btnSandwish')
 const pathElement = document.getElementById("btnSandwishSvgPath");
-const spanBlack = document.getElementById('span-black')
+const spanBlack = document.getElementById('spanBlack')
+
 // Parâmetro que gera o icon menu sandwish ativado
 const pathParamDactived = 'M3.75 9h16.5m-16.5 6.75h16.5'
 // Parâmetro que gera o icon menu sandwish desativado
@@ -14,32 +15,35 @@ menuSuspenso.classList.add('transition', 'duration-700', 'transition-all', 'ease
 
 function ativarMenu() {
 	pathElement.setAttribute("d", pathParamDactived);
-	spanBlack.classList.add('hidden', 'transition', 'duration-700', 'transition-all', 'ease-in-out')
-	spanBlack.classList.remove('fixed', 'transition', 'duration-700', 'transition-all', 'ease-in-out')
-	btnSandwish.classList.remove('text-white')
-	btnSandwish.classList.add('text-black')
-	menuSuspenso.classList.add('translate-y-full')
+	spanBlack.classList.remove('fixed');
+	spanBlack.classList.add('hidden');
+	btnSandwish.classList.remove('text-white');
+	btnSandwish.classList.add('text-black');
+	menuSuspenso.classList.add('translate-y-full');
 }
 
 function desativarMenu() {
-	spanBlack.classList.remove('hidden', 'transition', 'duration-700', 'transition-all', 'ease-in-out')
-	spanBlack.classList.add('fixed', 'transition', 'duration-700', 'transition-all', 'ease-in-out')
 	pathElement.setAttribute("d", pathParamDdisabled);
-	btnSandwish.classList.add('text-white')
-	menuSuspenso.classList.remove('translate-y-full')
+	spanBlack.classList.remove('hidden');
+	spanBlack.classList.add('fixed');
+	btnSandwish.classList.remove('text-black');
+	btnSandwish.classList.add('text-white');
+	menuSuspenso.classList.remove('translate-y-full');
+}
+
+function comportamentoBtnMenuSuspenso() {
+	count++
+	if (count % 2 === 0) desativarMenu()
+	else ativarMenu()
+
 }
 
 btnSandwish.addEventListener('click', () => {
-	count++
-	if (count % 2 === 0) {
-		desativarMenu()
-	} else {
-		ativarMenu()
-	}
+	comportamentoBtnMenuSuspenso()
 })
 
 
-exit.addEventListener('click', () => {
-	count = 0
-	ativarMenu()
-}) 
+closeMenu.addEventListener('click', () => {
+	comportamentoBtnMenuSuspenso()
+})
+
