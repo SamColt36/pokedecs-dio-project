@@ -20,7 +20,7 @@
 <body class="relative font-sans">
 	<!--Box navegação-->
 	<header
-		class="electric shadow-lg py-1 tracking-wide shadow-black/10 xs:h-14 sm:h-14 md:h-14 sm:px-2 md:px-2 lg:px-8">
+		class="bg-gradient shadow-lg py-1 tracking-wide shadow-black/10 xs:h-14 sm:h-14 md:h-14 sm:px-2 md:px-2 lg:px-8">
 		<!--Div criada para fins de alinhamento-->
 		<div class="relative flex justify-between items-center xl:max-w-4xl xl:mx-auto">
 			<!--Logo Tipografia-->
@@ -57,7 +57,7 @@
 	<!--/Box navegação-->
 
 	<!--Menu Suspenso para Mobile-->
-	<!--Essa tag personalizada serve somente para fins de alinhamento-->
+	<!--Essa tag <div> child serve para fins de alinhamento-->
 	<menuSuspenso class="fixed bottom-0 translate-y-full z-50 shadow-inner lg:hidden xl:hidden" id="menuSuspenso">
 		<!--Menu-->
 		<div class="flex flex-col-reverse items-end h-full">
@@ -99,16 +99,17 @@
 		</div>
 		<!--/Menu-->
 	</menuSuspenso>
-	<!--/Essa tag personalizada serve somente para fins de alinhamento-->
+	<!--/Essa tag <div> child serve para fins de alinhamento-->
 	<!--/Menu Suspenso para Mobile-->
 
 	<!--Banner-->
-	<section class="md:h-section pt-16 xl:max-w-4xl xl:mx-auto xl:px-0 xl:py-24">
+	<banner class="block pt-16 md:h-section xl:max-w-4xl xl:mx-auto xl:px-0 xl:py-24">
 		<div class="lg:p-8 xl:flex xl:items-center relative">
 			<div
 				class="px-4 xs:mx-0 sm:space-y-6 sm:mx-0 md:mx-0 md:space-y-6 md:mr-auto lg:space-y-9 lg:w-full xl:space-y-5">
 				<h1 class="text-4xl lg:text-6xl lg:max-w-xl xl:max-w-lg xl:text-6xl">Pokedex: Explore the World of
-					<b>Pokémon!</b></h1>
+					<b>Pokémon!</b>
+				</h1>
 
 				<!--Texto usado somente e smartphones-->
 				<p class="max-w-xs xs:text-xs sm:text-xl md:text-xl lg:hidden xl:hidden">Welcome to the Pokedex,
@@ -125,7 +126,7 @@
 				</p>
 				<!--/Texto mais descritivo usando em telas desktop e tablet-->
 				<a href="#main"
-					class="inline-block bg-blue-300 font-bold text-white py-3 xs:py-5 xs:px-9 sm:py-5 sm:px-9 sm:text-xl md:py-5 md:px-9 md:text-xl lg:py-7 lg:px-16 lg:text-2xl xl:py-5 xl:px-9"
+					class="inline-block rounded-lg bg-blue-300 border-b-4 border-blue-700/40 font-bold text-white py-3 xs:py-5 xs:px-9 sm:py-5 sm:px-9 sm:text-xl md:py-5 md:px-9 md:text-xl lg:py-7 lg:px-16 lg:text-2xl xl:py-5 xl:px-9"
 					id="letsStart">Let's
 					start</a>
 			</div>
@@ -139,12 +140,12 @@
 			class="xs:my-6 sm:my-24 md:my-24 lg:hidden xl:hidden">
 		<!--Imagem usada em telas mobile-->
 
-	</section>
+	</banner>
 	<!--/Banner-->
 
 	<!--Lista de Pokemons-->
 	<main
-		class="relative h-screen px-2 pb-4 z-10 space-y-4 lg:p-8 xl:bg-white xl:rounded-xl xl:max-w-4xl xl:mx-auto xl:px-0"
+		class="relative px-2 pb-4 z-10 space-y-4 lg:p-8 xl:bg-white xl:rounded-xl xl:max-w-4xl xl:mx-auto xl:px-0 xl:h-min"
 		id="main">
 		<!--Esse span é o responsável por deixar a tela escura quando o menu suspenso está ativado-->
 		<span class="hidden top-0 left-0 w-screen h-screen bg-black/75 z-30" id="spanBlack"></span>
@@ -167,6 +168,28 @@
 		<!--/Botão de paginação-->
 	</main>
 	<!--Lista de Pokemons-->
+
+	<!--Rodapé-->
+	<footer class="bg-black/90 text-gray-50 py-16">
+		<div class="space-y-5 flex-center flex-col">
+			<h2 class="text-2xl">Lorem Ipsum</h2>
+			<p class="text-center text-gray-500 text-xs max-w-sm xs:text-sm sm:text-sm md:text-sm">Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+				Recusandae iste eaque incidunt ullam deserunt?
+			</p>
+			<figure class="h-3 flex space-x-3 xs:h-4 sm:h-4 md:h-4">
+				<img class="h-full cursor-pointer" src="./src/assets/icon-facebook.png" alt="Icon alusivo à">
+				<img class="h-full cursor-pointer" src="./src/assets/icon-twitter.png" alt="Icon alusivo à">
+				<img class="h-full cursor-pointer" src="./src/assets/icon-g+.png" alt="Icon alusivo à">
+				<img class="h-full cursor-pointer" src="./src/assets/icon-linkedin.png" alt="Icon alusivo à">
+				<img class="h-full cursor-pointer" src="./src/assets/icon-github.png" alt="Icon alusivo à">
+			</figure>
+		</div>
+	</footer>
+
+	<copyright class="flex-center text-xs bg-black/95 p-4">
+		<p class="text-gray-50">Copyright &#169;2023 SamColt36. Design by <span class="text-gray-600 uppercase">nethunt</span></p>
+	</copyright>
+	<!--Rodapé-->
 
 	<!--Seção de Scripts-->
 	<script defer src="src/js/scrool-banner.js"></script>

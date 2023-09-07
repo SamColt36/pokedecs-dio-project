@@ -2,4 +2,4 @@ O arquivo `script.sh` cria a árvore de diretórios e arquivos utilidados em pro
 
 O arquivo `compiler.sh` compila o arquivo de saída css gerado pelo tailwind.config.js
 
-ajeitar responsividade da div banner para desktop
+Ajeitar 'alt' de imagens e comentários inline html
