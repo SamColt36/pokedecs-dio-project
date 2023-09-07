@@ -23,6 +23,9 @@ module.exports = {
       colors: {
         verde: '#48D0B0'
       },
+      spacing: {
+        'section': 'calc(100vh - 3.5rem)',
+      }
     },
   },
 
