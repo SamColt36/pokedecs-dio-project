@@ -14,6 +14,9 @@
 	<link rel="stylesheet" href="./src/css/output.css">
 	<title>Pokedex</title>
 	<link rel="icon" type="image/x-icon" href="./favicon.ico" sizes="96x96">
+	<script defer src="src/js/scrool-banner.js"></script>
+	<script defer src="./src/js/botão-sandwish.js"></script>
+	<script defer src="./src/js/main.js"></script>
 </head>
 <!--BODY bg-gray-50-->
 
@@ -24,7 +27,7 @@
 		<!--Div criada para fins de alinhamento-->
 		<div class="relative flex justify-between items-center xl:max-w-4xl xl:mx-auto">
 			<!--Logo Tipografia-->
-			<img src="./src/assets/Pokemon-logo.png" alt="" class="h-7 lg:h-7 xl:h-8">
+			<img src="./src/assets/Pokemon-logo.png" alt="Logo tipografia 'pokemon" class="h-7 lg:h-7 xl:h-8">
 			<!--/Logo Tipografia-->
 
 			<!--Menu em forma de lista. Disponível para desktop-->
@@ -48,7 +51,6 @@
 					<path stroke-linecap="round" stroke-linejoin="round" d="M3.75 9h16.5m-16.5 6.75h16.5"
 						id="btnSandwishSvgPath" />
 				</svg>
-
 			</button>
 			<!--/Icon menu sandwish-->
 		</div>
@@ -131,15 +133,16 @@
 					start</a>
 			</div>
 			<!--Imagem usada somente em desktop-->
-			<img src="./src/assets/pokemon-squirtle-bulbasaur-charmander-wallpaper-preview(1).png" alt=""
+			<img src="./src/assets/pokemon-squirtle-bulbasaur-charmander-wallpaper-preview(1).png"
+				alt="Imagem de três pokemons usando uma pokedex. Os pokemons em questão são: squirtle, bulbasaur echarmander"
 				class="hidden xl:block h-60">
 			<!--/Imagem usada somente em desktop-->
 		</div>
 		<!--Imagem usada em telas mobile-->
-		<img src="./src/assets/pokemon-squirtle-bulbasaur-charmander-wallpaper-preview(1).png" alt=""
+		<img src="./src/assets/pokemon-squirtle-bulbasaur-charmander-wallpaper-preview(1).png"
+			alt="Imagem de três pokemons usando uma pokedex. Os pokemons em questão são: squirtle, bulbasaur echarmander"
 			class="xs:my-6 sm:my-24 md:my-24 lg:hidden xl:hidden">
 		<!--Imagem usada em telas mobile-->
-
 	</banner>
 	<!--/Banner-->
 
@@ -173,30 +176,34 @@
 	<footer class="bg-black/90 text-gray-50 py-16">
 		<div class="space-y-5 flex-center flex-col">
 			<h2 class="text-2xl">Lorem Ipsum</h2>
-			<p class="text-center text-gray-500 text-xs max-w-sm xs:text-sm sm:text-sm md:text-sm">Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+			<p class="text-center text-gray-500 text-xs max-w-sm xs:text-sm sm:text-sm md:text-sm">Lorem ipsum dolor
+				sit, amet consectetur adipisicing elit.
 				Recusandae iste eaque incidunt ullam deserunt?
 			</p>
 			<figure class="h-3 flex space-x-3 xs:h-4 sm:h-4 md:h-4">
-				<img class="h-full cursor-pointer" src="./src/assets/icon-facebook.png" alt="Icon alusivo à">
-				<img class="h-full cursor-pointer" src="./src/assets/icon-twitter.png" alt="Icon alusivo à">
-				<img class="h-full cursor-pointer" src="./src/assets/icon-g+.png" alt="Icon alusivo à">
-				<img class="h-full cursor-pointer" src="./src/assets/icon-linkedin.png" alt="Icon alusivo à">
-				<img class="h-full cursor-pointer" src="./src/assets/icon-github.png" alt="Icon alusivo à">
+				<img class="h-full cursor-pointer" src="./src/assets/icon-facebook.png" alt="Icon alusivo ao Facebook"
+					title="facebook">
+				<img class="h-full cursor-pointer" src="./src/assets/icon-twitter.png" alt="Icon alusivo ao Twitter"
+					title="twitter">
+				<img class="h-full cursor-pointer" src="./src/assets/icon-g+.png" alt="Icon alusivo ao Google+"
+					title="google+">
+				<img class="h-full cursor-pointer" src="./src/assets/icon-linkedin.png" alt="Icon alusivo ao Linkedin"
+					title="linkedin">
+				<img class="h-full cursor-pointer" src="./src/assets/icon-github.png" alt="Icon alusivo ao Github"
+					title="github">
 			</figure>
 		</div>
 	</footer>
 
 	<copyright class="flex-center text-xs bg-black/95 p-4">
-		<p class="text-gray-50">Copyright &#169;2023 SamColt36. Design by <span class="text-gray-600 uppercase">nethunt</span></p>
+		<p class="text-gray-50">Copyright &#169;2023 SamColt36. Design by <span class="text-gray-600 uppercase"
+				title="nethunt">nethunt</span></p>
 	</copyright>
 	<!--Rodapé-->
 
 	<!--Seção de Scripts-->
-	<script defer src="src/js/scrool-banner.js"></script>
-	<script defer src="./src/js/botão-sandwish.js"></script>
 	<script src="./src/js/pokemon-model.js"></script>
 	<script src="./src/js/poke-api.js"></script>
-	<script defer src="./src/js/main.js"></script>
 	<!--Seção de Scripts-->
 </body>
 
