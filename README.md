@@ -2,12 +2,6 @@
 
 Este é um projeto simples de Pokedex desenvolvido usando HTML, CSS com Tailwind CSS e JavaScript. Esse projeto foi desenvolvido na Formação JavaScript Developer da DIO (Digital Inovation One)
 
-## Status do Projeto
-
-[![GitHub Pages](https://img.shields.io/badge/Deploy-GitHub%20Pages-blue.svg)](https://samcolt36.github.io/pokedecs-dio-project/)
-
-O projeto está hospedado no GitHub Pages. Você pode acessá-lo [aqui](https://samcolt36.github.io/pokedecs-dio-project/).
-
 ## Em Manutenção e Otimizações Futuras
 
 Este projeto está em constante evolução e melhorias estão planejadas para o futuro. Além disso, novas funcionalidades serão adicionadas à medida que o projeto se desenvolve. Algumas das otimizações futuras planejadas incluem:
